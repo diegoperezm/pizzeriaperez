@@ -21,3 +21,31 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+.dir-locals.el
+
+# Org-mode
+.org-id-locations
+*_archive
+*.*~
+*.swp
+*.swo
+*.js~
+*.json~
+
+# Tern.js
+.tern-port
+.tern-project
+
+
