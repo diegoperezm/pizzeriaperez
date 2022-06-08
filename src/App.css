@@ -82,3 +82,22 @@ li {
 .item--price {
     color: red;
 }
+
+.item-detail {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap ;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.item-detail--heading {
+    text-align: center;
+    width: 100%;
+}
+
+.item-detail--img {
+    margin: 1em;
+    max-width: 60%;
+}
+
