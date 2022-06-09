@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Pizzería Pérez 
+> Un e-commerce usando React 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Éste  proyecto se ha  creado con [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Instalación 
 
-In the project directory, you can run:
+```shell
+git clone https://github.com/diegoperezm/pizzeriaperez.git; 
+cd pizzeriaperez;
+npm install;
+npm start;
+```
+
+##  Scripts
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ejecuta la aplicación en modo de desarrollo.
+Abre [http://localhost:3000](http://localhost:3000) para verla en el navegador. 
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Construye la aplicación para producción (carpeta `build`).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Navegación
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `/` 
 
-### `npm run eject`
+   Todos los productos de la pizzería.
+ 
+- `/category/ofertas`
+- `/category/pizzas`
+- `/category/adicionales`
+- `/category/bebidas`
+- `/category/postres`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   Todos los productos de la categoría correspondiente.
+    
+- `/item/productId` 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   Los detalles del producto elegido.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Links
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Clickear el brand dirige a `/` 
+- Clickear 'Ver Detalle' dirige  a `/item/productId`  
+- Clickear en una  categoría del navbar dirige  a `/category/categoryId` 
 
-## Learn More
+## Rutas y componentes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `/`
 
-### Code Splitting
+  Monta componente `ItemListContainer` 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `/category/:categoryId` 
 
-### Analyzing the Bundle Size
+  Monta componente `ItemListContainer` 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `/item/:productId` 
 
-### Making a Progressive Web App
+  Monta componente `ItemDetailContainer`
+ 
+# Navegación Ejemplo 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+![navegacion](https://res.cloudinary.com/dibkfoic9/image/upload/v1654808466/navegacion.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## Licencia
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+"El código de este proyecto tiene una licencia MIT"

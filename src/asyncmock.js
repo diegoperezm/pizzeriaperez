@@ -1,7 +1,7 @@
 const products = [
     {
         id: '1',
-        category: 'Pizzas',
+        category: 'pizzas',
         title: 'Pizza Margarita',
         description: 'pizza con tomate, mozzarella, albahaca fresca.',
         price: '$4.99',
@@ -9,7 +9,7 @@ const products = [
     },
     {
         id: '2',
-        category: 'Pizzas',
+        category: 'pizzas',
         title: 'Pizza Marinera',
         description: 'Pizza con tomate, ajo, orégano y aceite de oliva',
         price: '$3.59',
@@ -17,7 +17,7 @@ const products = [
     },
     {
         id: '3',
-        category: 'Pizzas',
+        category: 'pizzas',
         title: 'Pizza Hawaiana',
         description: 'Pizza con queso, tomate, jamón y piña.',
         price: '$3.59',
@@ -25,7 +25,7 @@ const products = [
     },
     {
         id: '4',
-        category: 'Pizzas',
+        category: 'pizzas',
         title: 'Pizza  mexicana',
         description: 'Pizza con tomate, aguacate, jalapeños y queso.',
         price: '$6.95',
@@ -33,7 +33,7 @@ const products = [
     },
     {
         id: '5',
-        category: 'Ofertas',
+        category: 'ofertas',
         title: 'Pizza  al tegamino',
         description: 'Pizza con queso y albahaca fresca.',
         price: '$1.95',
@@ -42,7 +42,7 @@ const products = [
 
     {
         id: '6',
-        category: 'Bebidas',
+        category: 'bebidas',
         title: 'Jugo de Naranja',
         description: 'Jugo de naranja.',
         price: '$2.00',
@@ -50,7 +50,7 @@ const products = [
     },
     {
         id: '7',
-        category: 'Bebidas',
+        category: 'bebidas',
         title: 'Jugo de Tomate',
         description: 'Jugo de tomate.',
         price: '$2.50',
@@ -58,7 +58,7 @@ const products = [
     },
     {
         id: '8',
-        category: 'Postres',
+        category: 'postres',
         title: 'Helado',
         description: 'Helado de chocolate.',
         price: '$5.00',
@@ -66,7 +66,7 @@ const products = [
     },
     {
         id: '9',
-        category: 'Postres',
+        category: 'postres',
         title: 'Flan',
         description: 'Flan.',
         price: '$3.00',
@@ -75,7 +75,7 @@ const products = [
 
     {
         id: '10',
-        category: 'Adicionales',
+        category: 'adicionales',
         title: 'Queso parmesano',
         description: 'Queso parmesano.',
         price: '$1.00',
@@ -92,10 +92,18 @@ export const getProducts = () => {
     });
 }
 
-export const getItems = id => {
+export const getProductsByCategory = categoryId => {
     return new Promise( (resolve, reject) => {
         setTimeout(() => {
-            resolve(products.find(product => product.id === id ))
-        }, 2000); 
+            resolve(products.filter(product => product.category === categoryId ))
+        }, 500); 
+    });
+}
+
+export const getProductById = productId => {
+    return new Promise( (resolve, reject) => {
+        setTimeout(() => {
+            resolve(products.find(product => product.id === productId ))
+        }, 500); 
     });
 }

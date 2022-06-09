@@ -1,4 +1,3 @@
-
 function ItemDetail({title, description, pictureURL,  price}) {
     return (
            <div className="item-detail">

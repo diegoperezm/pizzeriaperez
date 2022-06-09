@@ -66,7 +66,7 @@ li {
     padding-left: 1em;
     border: 1px solid black;
     width:  20vh;  
-    height: 25vh;
+    height: 35vh;
 }
 
 .item--img {
@@ -101,3 +101,40 @@ li {
     max-width: 60%;
 }
 
+.active {
+    background-color: #FEF9A7; 
+    border: none;
+    border-radius: 5px;
+    color: ;
+    padding: 0.8em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+}
+
+.inactive {
+    background-color: #EEEEEE; 
+    border: none;
+    border-radius: 5px;
+    color: black;
+    padding: 0.8em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+.loading {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+    padding: 1em;
+}
+
+.empty {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+    padding: 1em;
+}
