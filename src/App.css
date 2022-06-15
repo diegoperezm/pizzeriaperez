@@ -153,3 +153,12 @@ li {
     width: 100%;
 }
 
+.cart {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+    padding: 1em;
+}
+
+
+
