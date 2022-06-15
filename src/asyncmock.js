@@ -5,6 +5,7 @@ const products = [
         title: 'Pizza Margarita',
         description: 'pizza con tomate, mozzarella, albahaca fresca.',
         price: '$4.99',
+        stock: 10,
         pictureURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/320px-Eq_it-na_pizza-margherita_sep2005_sml.jpg',
     },
     {
@@ -13,6 +14,7 @@ const products = [
         title: 'Pizza Marinera',
         description: 'Pizza con tomate, ajo, orégano y aceite de oliva',
         price: '$3.59',
+        stock: 5,
         pictureURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Pizza_marinara.jpg/320px-Pizza_marinara.jpg',
     },
     {
@@ -21,6 +23,7 @@ const products = [
         title: 'Pizza Hawaiana',
         description: 'Pizza con queso, tomate, jamón y piña.',
         price: '$3.59',
+        stock: 8,
         pictureURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Pizza_Hawaii_02.jpg/257px-Pizza_Hawaii_02.jpg',
     },
     {
@@ -29,6 +32,7 @@ const products = [
         title: 'Pizza  mexicana',
         description: 'Pizza con tomate, aguacate, jalapeños y queso.',
         price: '$6.95',
+        stock: 10,
         pictureURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Mexicana_Pizza_-_L%27Olivo_AUD17_large.jpg/320px-Mexicana_Pizza_-_L%27Olivo_AUD17_large.jpg',
     },
     {
@@ -37,6 +41,7 @@ const products = [
         title: 'Pizza  al tegamino',
         description: 'Pizza con queso y albahaca fresca.',
         price: '$1.95',
+        stock: 4,
         pictureURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/La_Voil%C3%A0%40Pizza_al_tegamino%40Scugnizzo%40Turin.jpg/320px-La_Voil%C3%A0%40Pizza_al_tegamino%40Scugnizzo%40Turin.jpg'
     },
 
@@ -46,6 +51,7 @@ const products = [
         title: 'Jugo de Naranja',
         description: 'Jugo de naranja.',
         price: '$2.00',
+        stock: 10,
         pictureURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Oranges_and_orange_juice.jpg/157px-Oranges_and_orange_juice.jpg'
     },
     {
@@ -54,6 +60,7 @@ const products = [
         title: 'Jugo de Tomate',
         description: 'Jugo de tomate.',
         price: '$2.50',
+        stock: 10,
         pictureURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Tomato_Juice.jpg/320px-Tomato_Juice.jpg'
     },
     {
@@ -62,6 +69,7 @@ const products = [
         title: 'Helado',
         description: 'Helado de chocolate.',
         price: '$5.00',
+        stock: 10,
         pictureURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ice_Cream_dessert_02.jpg/180px-Ice_Cream_dessert_02.jpg'
     },
     {
@@ -70,6 +78,7 @@ const products = [
         title: 'Flan',
         description: 'Flan.',
         price: '$3.00',
+        stock: 10,
         pictureURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Cremecaramel.jpg/320px-Cremecaramel.jpg'
     },
 
@@ -79,6 +88,7 @@ const products = [
         title: 'Queso parmesano',
         description: 'Queso parmesano.',
         price: '$1.00',
+        stock: 15,
         pictureURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Insegna_per_caseificio_-_Musei_del_cibo_-_Parmigiano_-_069.tif/lossy-page1-206px-Insegna_per_caseificio_-_Musei_del_cibo_-_Parmigiano_-_069.tif.jpg'
     },
 ];

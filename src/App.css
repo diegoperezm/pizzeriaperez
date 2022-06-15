@@ -138,3 +138,18 @@ li {
     text-align: center;
     padding: 1em;
 }
+
+.counter {
+    width: 12vw;
+}
+
+.counter--controls  {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter--button {
+    width: 100%;
+}
+
