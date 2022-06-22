@@ -42,11 +42,20 @@ li {
 }
 
 .cartWidget {
+    height: 3.8em;
     align-self: center; 
     flex-basis: 10%;
 }
 
+.cartWidget--quantity {
+    padding-left: 0.3em;
+    font-size: 2em;
+}
+
+
 .cartIcon {
+    padding: 0;
+    margin: 0;
     width: 2em;
 }
 
@@ -157,8 +166,28 @@ li {
     margin: 0 auto;
     max-width: 100%;
     text-align: center;
-    padding: 1em;
+    padding: 0.5em;
 }
 
+.cart--item {
+    border: 1px solid black;
+    margin: 1em auto;
+    max-width: 80%;
+    padding: 2em;
+    text-align: center;
+}
 
+.cart--item--info {
+    padding-right: 2em;
+}
+
+.cart--item--button {
+    border-radius: 8px;
+    background-color: yellow;
+    padding: 0.5em;
+}
+
+.cart--total {
+    font-size: 2rem;
+}
 

@@ -21,7 +21,7 @@ function ItemDetail({id,title, description, pictureURL, price, stock}) {
                <div>
                   <p className="item--title">{title}</p>   
                   <p>{description}</p>      
-                  <p className="item--price">{price}</p> 
+                  <p className="item--price">${price}</p> 
                     { quantityAdded === 0
                         ? <ItemCount stock={stock}  initial="1" onAdd={handleOnAdd} />
                         : <Link to='/cart'>Terminar mi compra</Link>
