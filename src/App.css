@@ -191,3 +191,40 @@ li {
     font-size: 2rem;
 }
 
+.form--container {
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 30%;
+}
+.form--contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.form--label {
+  padding: 1em;
+}
+
+.form--input {
+  margin-left: 1em;
+}
+
+.form--submit {
+  align-self: center;
+  margin-bottom: 1em;
+  width: 50%;
+}
+
+.checkout--button {
+    background-color: #EEEEEE; 
+    border: 1px solid black;
+    border-radius: 2px;
+    color: black;
+    padding: 0.2em;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 1em;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
