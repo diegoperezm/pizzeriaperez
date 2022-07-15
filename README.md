@@ -61,13 +61,18 @@ Construye la aplicación para producción (carpeta `build`).
 - `/item/:productId` 
 
   Monta componente `ItemDetailContainer`
- 
+
+-`/cart/`
+  Monta componente `Cart` 
+
+-`/checkout/`
+  Monta componente `Checkout` 
+
+
 # Navegación Ejemplo 
 
 
 ![navegacion](https://res.cloudinary.com/dibkfoic9/image/upload/v1654808466/navegacion.gif)
-
-
 
 
 ## Licencia

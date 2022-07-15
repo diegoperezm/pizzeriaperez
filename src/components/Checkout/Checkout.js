@@ -1,101 +1,75 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom'; 
+import CheckoutForm  from '../CheckoutForm/CheckoutForm';
 import CartContext from '../../context/CartContext';
 import { addDoc, collection  } from 'firebase/firestore';
 import { db } from '../../services/firebase/index';
+import CheckoutItems from '../CheckoutItems/CheckoutItems';
 
 const Checkout  = () =>   {
     const { cart, getCartTotal  } = useContext(CartContext);
     const totalPrice = getCartTotal();
+    const [ ticket, setTicket] = useState('');
 
-    const [ products, setProducts] = useState({
-        buyer: {
-            firstName: ' ',
-            lastName: ' ',
-            email: ' ',
-            phone: ' ',
-            address:' '
-        },
-        items: cart,
-        total: totalPrice 
+    useEffect(()=> {}, [ticket]); 
+       let orderId = Math.floor(Math.random() * 10); 
+       let fecha = new Date();
+       const [ products, setProducts] = useState({
+           id: orderId,
+           estado: "generada",
+           fecha: fecha, 
+           buyer: {
+               firstName: ' ',
+               lastName: ' ',
+               email: ' ',
+               phone: ' ',
+               address:' '
+           },
+           items: cart,
+           total: totalPrice 
     });
-
+    
     const handleSubmit = (evt) => {
         evt.preventDefault();
+        
+        if( products.length === 0 ){
+            return
+        } 
         const collectionRef = collection(db, 'orders')
-        addDoc(collectionRef, products).then(({id})=> { console.log(id)} );
+        addDoc(collectionRef, products).then(({id})=> { setTicket(id)} );
     }; 
 
-    
+    if( cart.length === 0 ) {
+        return (
+            <div className="cart">
+                <Link to='/'>No hay items</Link>
+            </div>
+        );
+     } 
+
     return (
-        <div className="form--container">
-            <form className="form--contents" onSubmit={handleSubmit}>
-             <label className="form--label">
-               First name:
-                 <input
-                     className="form--input"
-                     required
-                     type="text"
-                     value={products.firstName}
-                     name="firstName"
-                     onChange={({target}) =>  {
-                         setProducts({...products, buyer: { ...products.buyer, firstName: target.value}})}
-                      } />
-             </label>
-             <label className="form--label">
-               Last name:
-                 <input
-                     className="form--input"
-                     required
-                     type="text"
-                     value={products.lastName}
-                     name="lastName"
-                     onChange={({target}) =>  {
-                         setProducts({...products, buyer: { ...products.buyer, lastName: target.value}})}
-                      } />
-             </label>
-             <label className="form--label">
-               Email:
-                 <input
-                     className="form--input"
-                     required
-                     type="email"
-                     value={products.email}
-                     name="email"
-                     onChange={({target}) =>  {
-                         setProducts({...products, buyer: { ...products.buyer, email: target.value}})}
-                      } />
-             </label>
-             <label className="form--label">
-                 Phone: 
-                 <input
-                     className="form--input"
-                     required
-                     type="text"
-                     value={products.phone}
-                     name="phone"
-                     onChange={({target}) =>  {
-                         setProducts({...products, buyer: { ...products.buyer, phone: target.value}})}
-                      } />
-             </label>
-             <label className="form--label">
-                 Address: 
-                 <input
-                     className="form--input"
-                     required
-                     type="text"
-                     value={products.address}
-                     name="address"
-                 onChange={({target}) =>  {
-                         setProducts({...products, buyer: { ...products.buyer, address: target.value}})}
-                      } />
-             </label>
-               <input
-                   className="form--submit"
-                   type="submit"
-                   value="Generar Orden" />
-           </form>
-        </div>
+        <>
+            { ticket !== '' ?
+              <div className="ticket">
+                  <div>
+                      <span className="ticket--title">Ticket:</span>
+                      <span className="ticket--info">{ticket}</span>
+                  </div>
+              </div>
+               :
+              <>
+             <CheckoutForm handleSubmit={handleSubmit} products={products} setProducts={setProducts}/>
+             <div>
+               {cart.map(product => <CheckoutItems key={product.item.id} {...product.item} quantity={product.quantity}/>)}
+             </div>
+             <div className="checkout--total">
+              <span >Total: ${totalPrice}</span>
+             </div>
+             </>
+            }
+        </>
     );
+
 }
 
 

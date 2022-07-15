@@ -1,4 +1,3 @@
-import pizzaBrand from '../../pizzabrand.png'; 
 import CartWidget from '../CartWidget/CartWidget';
 import { Link, NavLink } from 'react-router-dom';
 
@@ -6,7 +5,7 @@ const NavBar = () => {
     return (
         <nav className="navbar">
             <Link to='/' className="brand" >Pizzería Pérez
-               <img  className="pizzaBrand" alt="pizza icon" src={pizzaBrand}/>
+               <img  className="pizzaBrand" alt="pizza icon" src="/images/pizzabrand.png"/>
             </Link>
             <CartWidget />
             <ul className="categories">

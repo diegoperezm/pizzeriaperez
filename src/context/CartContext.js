@@ -18,7 +18,7 @@ export const CartProvider = ({ children }) => {
  
  const getCartQuantity = () => sumCartQuantity(cart);
 
- const getCartTotal    = () => sumCartTotal(cart);
+ const getCartTotal    = () => sumCartTotal(cart).toPrecision(2);
 
  const addItem = (product) => {
    if(!isInCart(product.item.id)) {

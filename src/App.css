@@ -228,3 +228,37 @@ li {
     font-size: 0.9em;
 }
 
+.cart--button {
+    background-color: #EEEEEE; 
+    border: 1px solid black;
+    border-radius: 2px;
+    color: black;
+    padding: 0.2em;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 1em;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+.checkout--total {
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.ticket {
+    border: 1px solid black;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+
+.ticket--title {
+    margin-right: 1em;
+}
+
+.error--email {
+    text-align: center;
+}

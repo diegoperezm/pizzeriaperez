@@ -14,6 +14,9 @@ const ItemDetailContainer = () => {
         getDoc(docRef)
             .then(doc => {
                 const producFormatted = { id: doc.id, ...doc.data()}; 
+                if (!producFormatted.hasOwnProperty('description')) {
+                    return;
+                }
                 setProduct(producFormatted);
         }).catch(error => console.log(error))
             .finally(() => setLoading(false) );
@@ -30,7 +33,7 @@ const ItemDetailContainer = () => {
         <div>
             { product
                 ? <ItemDetail {...product}   />
-                : <div className="empty"><h2>No hay productos</h2></div>
+                : <div className="empty"><h2>El producto no existe</h2></div>
             }
         </div>
     );
@@ -41,4 +44,14 @@ const ItemDetailContainer = () => {
 export default ItemDetailContainer;
 
 
-
+/*
+{
+    "id": "o2QweqWpd6lDgkMAoV96",
+    "description": "pizza con tomate, mozzarella, albahaca fresca.",
+    "category": "pizzas",
+    "title": "Pizza Margarita",
+    "price": 4.99,
+    "pictureURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/320px-Eq_it-na_pizza-margherita_sep2005_sml.jpg",
+    "stock": 10
+}
+*/
